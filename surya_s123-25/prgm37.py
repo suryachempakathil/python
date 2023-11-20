@@ -13,3 +13,13 @@ class Book(Publisher):
 class python(Book):
     def __init__(self,p,no,title1,author1,name1):
         self.price=p
+        self.no_of_pages=no
+        Book.__init__(self,title1,author1,name1)
+    def show(self):
+        print('Book title:',self.title)
+        print('author:',self.author)
+        print('publisher:',self.name)
+        print('price:Rs.',self.price)
+        print('no of pages:',self.no_of_pages)
+P1=Python(700,300,'Programming with Python','GV Rossum','ABC Books')
+P1.show()
